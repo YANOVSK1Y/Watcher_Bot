@@ -1,0 +1,6 @@
+2021-09-13 18:32:20,388 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2021-09-13 18:32:29,943 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2021-09-13 18:32:42,027 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2021-09-13 21:38:41,109 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: failed to get HTTP URL content
+2021-09-13 21:38:56,478 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong file identifier/HTTP URL specified
+2021-09-13 21:40:34,123 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong HTTP URL specified
