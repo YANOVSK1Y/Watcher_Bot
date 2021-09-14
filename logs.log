@@ -4,3 +4,20 @@
 2021-09-13 21:38:41,109 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: failed to get HTTP URL content
 2021-09-13 21:38:56,478 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong file identifier/HTTP URL specified
 2021-09-13 21:40:34,123 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong HTTP URL specified
+2021-09-14 16:21:02,374 - ERROR - db_operator - no such table: users
+2021-09-14 16:22:58,217 - ERROR - db_operator - no such table: users
+2021-09-14 16:28:03,813 - ERROR - db_operator - no such table: users
+2021-09-14 16:33:01,969 - ERROR - db_operator - no such table: users
+2021-09-14 16:37:29,504 - ERROR - db_operator - no such table: users
+2021-09-14 16:38:50,617 - ERROR - db_operator - no such table: users
+2021-09-14 16:58:00,360 - ERROR - db_operator - no such table: users
+2021-09-14 17:12:06,796 - ERROR - db_operator - _check_existence() missing 1 required positional argument: 'data'
+2021-09-14 17:13:03,300 - ERROR - db_operator - _check_existence() missing 1 required positional argument: 'data'
+2021-09-14 17:13:41,710 - ERROR - db_operator - parameters are of unsupported type
+2021-09-14 17:13:50,411 - ERROR - db_operator - parameters are of unsupported type
+2021-09-14 17:13:58,503 - ERROR - db_operator - parameters are of unsupported type
+2021-09-14 17:17:23,803 - ERROR - db_operator - parameters are of unsupported type
+2021-09-14 17:19:06,778 - ERROR - db_operator - parameters are of unsupported type
+2021-09-14 17:19:18,518 - ERROR - db_operator - parameters are of unsupported type
+2021-09-14 17:19:52,522 - ERROR - db_operator - parameters are of unsupported type
+2021-09-14 17:21:28,360 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 9 supplied.
