@@ -23,10 +23,16 @@ def db_movie_write(data):
     try:
         conn = sqlite3.connect('movies.db')
         cur = conn.cursor()
-        cur.execute("INSERT INTO movies VALUES (?,?,?,?,?,?,?)", data)
-        cur.close()
-        conn.commit()
-        conn.close()
+        cur.execute("SELECT name FROM movies WHERE name = (?)", data[1])
+        res_existence = cur.fetchall()
+        print(res_existence)
+        if len(res_existence) > 0:
+            pass
+        else:
+            cur.execute("INSERT INTO movies VALUES (?,?,?,?,?,?,?)", data)
+            cur.close()
+            conn.commit()
+            conn.close()
     except DBError as e:
         logger.error(e)
 
