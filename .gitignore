@@ -1,3 +1,4 @@
+.gitignore
 token.txt
 users.db
 logs.log
