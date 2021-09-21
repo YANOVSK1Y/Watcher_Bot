@@ -63,13 +63,13 @@ def db_users_films_watch(user_chat_id, item):
         cur = conn.cursor()
         cur.execute("SELECT watch FROM users_films WHERE userchatid = {}".format(user_chat_id))
         result_from_db = cur.fetchall()
-        res = list()
-        for i in result_from_db:
-            for j in i:
-                res.append(j)
-        res.append(item)
-        res_tup = tuple(res)
-        cur.execute("UPDATE users_films SET watch = {} WHERE userchatid = {}".format(res_tup, user_chat_id))
+        item_from_db = result_from_db[0][0]
+        
+        res = str(item_from_db) + ', ' + str(item)
+
+        print(res)
+        cur.execute("UPDATE users_films SET watch = ? WHERE userchatid = ?", (res, user_chat_id))
+
         cur.close()
         conn.commit()
         conn.close()

@@ -51,8 +51,8 @@ def dialog_operator(message):
 def query_handler(call):
     if call.data == 'watch':
         bot.answer_callback_query(callback_query_id=call.id, text='Added to watch list')
-        # print(str(call.from_user.id) + " -- " + str(call.message.caption))
-        db_users_films_watch('12345', 'tt777777')
+        print(str(call.from_user.id) + " -- " + str(call.message.caption))
+        # db_users_films_watch(call.from_user.id, imdb_id)
     elif  call.data == 'willwatch':
         bot.answer_callback_query(callback_query_id=call.id, text='Added to willwatch list')
     elif call.data == 'viewed':

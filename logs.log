@@ -190,3 +190,20 @@
 2021-09-21 18:10:27,195 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
 2021-09-21 18:10:55,815 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
 2021-09-21 18:11:24,760 - ERROR - db_operator - row value misused
+2021-09-21 20:17:32,953 - ERROR - db_operator - row value misused
+2021-09-21 20:17:33,725 - ERROR - db_operator - row value misused
+2021-09-21 20:24:27,999 - ERROR - db_operator - row value misused
+2021-09-21 20:25:22,988 - ERROR - db_operator - row value misused
+2021-09-21 20:26:44,189 - ERROR - db_operator - 'v_1'
+2021-09-21 20:27:33,220 - ERROR - db_operator - row value misused
+2021-09-21 20:28:25,287 - ERROR - db_operator - row value misused
+2021-09-21 20:38:59,433 - ERROR - db_operator - no such column: '10', 'tt777777'
+2021-09-21 20:39:26,157 - ERROR - db_operator - no such column: HELLO
+2021-09-21 20:57:21,466 - ERROR - db_operator - name 'sql' is not defined
+2021-09-21 21:00:52,153 - ERROR - db_operator - name 'sql' is not defined
+2021-09-21 21:02:04,506 - ERROR - db_operator - name 'sql' is not defined
+2021-09-21 21:13:07,988 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 2, and there are 5 supplied.
+2021-09-21 21:13:45,872 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 2, and there are 5 supplied.
+2021-09-21 21:14:58,241 - ERROR - db_operator - name 'res_tup' is not defined
+2021-09-21 21:15:30,136 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 21:21:04,199 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
