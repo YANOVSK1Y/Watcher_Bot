@@ -1,2 +1,5 @@
 token.txt
 users.db
+logs.log
+movies.db
+users_films.db

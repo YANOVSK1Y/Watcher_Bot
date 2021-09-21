@@ -63,13 +63,15 @@ def db_users_films_watch(user_chat_id, item):
         cur = conn.cursor()
         cur.execute("SELECT watch FROM users_films WHERE userchatid = {}".format(user_chat_id))
         result_from_db = cur.fetchall()
-        res = ()
+        res = list()
         for i in result_from_db:
             for j in i:
-                tupl.append(j)
-        print(res)
-        cur.execute("UPDATE users_films SET watch = ? WHERE userchatid = ?", (res, user_chat_id))
+                res.append(j)
+        res.append(item)
+        res_tup = tuple(res)
+        cur.execute("UPDATE users_films SET watch = {} WHERE userchatid = {}".format(res_tup, user_chat_id))
         cur.close()
+        conn.commit()
         conn.close()
     except Exception as e:
         logger.error(e)

@@ -51,7 +51,7 @@ def dialog_operator(message):
 def query_handler(call):
     if call.data == 'watch':
         bot.answer_callback_query(callback_query_id=call.id, text='Added to watch list')
-        print(str(call.from_user.id) + " -- " + str(call.message.caption))
+        # print(str(call.from_user.id) + " -- " + str(call.message.caption))
         db_users_films_watch('12345', 'tt777777')
     elif  call.data == 'willwatch':
         bot.answer_callback_query(callback_query_id=call.id, text='Added to willwatch list')
@@ -69,7 +69,6 @@ def _find_by_titlename(message):
         db_result = db_movie_check(imdb_id)
         if db_result == False:
             result_api_search = search_by_imdb_id(imdb_id)
-            print(result_api_search)
             item = result_api_search.get('Data')
             title_name = item.get('title')
             title_year = item.get('year')

@@ -163,3 +163,30 @@
 2021-09-21 17:45:16,758 - ERROR - db_operator - name 'tupl' is not defined
 2021-09-21 17:45:43,446 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
 2021-09-21 17:45:45,332 - ERROR - db_operator - name 'tupl' is not defined
+2021-09-21 17:47:42,982 - ERROR - db_operator - name 'tupl' is not defined
+2021-09-21 17:48:38,919 - ERROR - db_operator - local variable 'res' referenced before assignment
+2021-09-21 17:49:03,678 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 17:49:34,268 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 17:49:55,344 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 17:50:30,337 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 17:51:50,564 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 17:52:34,827 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 17:53:10,156 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 17:53:34,379 - ERROR - db_operator - name 'tup' is not defined
+2021-09-21 17:53:49,055 - ERROR - db_operator - database is locked
+2021-09-21 17:54:42,381 - ERROR - db_operator - database is locked
+2021-09-21 17:55:45,012 - ERROR - db_operator - database is locked
+2021-09-21 17:57:23,999 - ERROR - db_operator - near ",": syntax error
+2021-09-21 17:57:43,665 - ERROR - db_operator - near ",": syntax error
+2021-09-21 17:58:33,500 - ERROR - db_operator - near ",": syntax error
+2021-09-21 18:02:19,188 - ERROR - db_operator - near ",": syntax error
+2021-09-21 18:02:37,706 - ERROR - db_operator - near ",": syntax error
+2021-09-21 18:03:18,385 - ERROR - db_operator - near ",": syntax error
+2021-09-21 18:04:02,243 - ERROR - db_operator - no such column: '123', 'tt777777'
+2021-09-21 18:04:17,253 - ERROR - db_operator - row value misused
+2021-09-21 18:04:47,710 - ERROR - db_operator - row value misused
+2021-09-21 18:06:09,525 - ERROR - db_operator - near "WHERE": syntax error
+2021-09-21 18:08:43,438 - ERROR - db_operator - row value misused
+2021-09-21 18:10:27,195 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 18:10:55,815 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 18:11:24,760 - ERROR - db_operator - row value misused
