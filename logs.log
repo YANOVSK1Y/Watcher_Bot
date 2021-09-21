@@ -207,3 +207,35 @@
 2021-09-21 21:14:58,241 - ERROR - db_operator - name 'res_tup' is not defined
 2021-09-21 21:15:30,136 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
 2021-09-21 21:21:04,199 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2021-09-21 21:34:09,991 - ERROR - db_operator - table users has 5 columns but 4 values were supplied
+2021-09-21 21:34:14,321 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 21:40:53,274 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2021-09-21 21:49:51,504 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 21:51:23,999 - ERROR - db_operator - list index out of range
+2021-09-21 21:51:25,168 - ERROR - db_operator - list index out of range
+2021-09-21 21:51:50,749 - ERROR - db_operator - list index out of range
+2021-09-21 21:51:52,618 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:02,932 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:04,556 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:06,046 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:39,504 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:43,748 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:54,181 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:56,844 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:58,527 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:58,533 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:58,622 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:59,202 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:59,298 - ERROR - db_operator - list index out of range
+2021-09-21 21:52:59,983 - ERROR - db_operator - list index out of range
+2021-09-21 21:53:00,253 - ERROR - db_operator - list index out of range
+2021-09-21 21:53:00,324 - ERROR - db_operator - list index out of range
+2021-09-21 21:53:04,458 - ERROR - db_operator - list index out of range
+2021-09-21 21:53:05,218 - ERROR - db_operator - list index out of range
+2021-09-21 21:56:46,183 - ERROR - db_operator - database is locked
+2021-09-21 21:56:47,528 - ERROR - db_operator - database is locked
+2021-09-21 21:56:51,428 - ERROR - db_operator - database is locked
+2021-09-21 21:56:52,640 - ERROR - db_operator - database is locked
+2021-09-21 21:56:56,571 - ERROR - db_operator - database is locked
+2021-09-21 21:56:57,752 - ERROR - db_operator - database is locked
+2021-09-21 21:57:01,737 - ERROR - db_operator - database is locked

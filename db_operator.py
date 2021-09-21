@@ -58,13 +58,14 @@ def _check_existence(item , data):
 
 def db_users_films_watch(user_chat_id, item):
     try:
+        print(user_chat_id)
         #data (userchatid, watch, willwatch, viewed)
         conn = sqlite3.connect('users_films.db')
         cur = conn.cursor()
         cur.execute("SELECT watch FROM users_films WHERE userchatid = {}".format(user_chat_id))
         result_from_db = cur.fetchall()
         item_from_db = result_from_db[0][0]
-        
+        print(item_from_db)
         res = str(item_from_db) + ', ' + str(item)
 
         print(res)

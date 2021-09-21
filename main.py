@@ -51,8 +51,14 @@ def dialog_operator(message):
 def query_handler(call):
     if call.data == 'watch':
         bot.answer_callback_query(callback_query_id=call.id, text='Added to watch list')
-        print(str(call.from_user.id) + " -- " + str(call.message.caption))
-        # db_users_films_watch(call.from_user.id, imdb_id)
+        # print(str(call.from_user.id) + " -- " + str(call.message.caption))
+        if call.message.caption == None:
+            st = str(call.message.text)
+            imdb_id = st.split('\n')[-1].split(':')[-1]
+        else:
+            st = str(call.message.caption)
+            imdb_id = st.split('\n')[-1].split(':')[-1]
+        db_users_films_watch(call.from_user.id, imdb_id)
     elif  call.data == 'willwatch':
         bot.answer_callback_query(callback_query_id=call.id, text='Added to willwatch list')
     elif call.data == 'viewed':
@@ -86,19 +92,19 @@ def _find_by_titlename(message):
             for i in item.get('gen'):
                 title_genres += i.get('genre') + ', '
             try:
-                bot.send_photo(message.chat.id, title_poster, caption=f'Title name: {title_name}\nYear: {title_year}\nGenres: {title_genres}\nRating: {title_rating}\nCOntent rating: {title_content_rating}', reply_markup=inline_markup_film_parameters)
+                bot.send_photo(message.chat.id, title_poster, caption=f'Title name:{title_name}\nYear:{title_year}\nGenres:{title_genres}\nRating:{title_rating}\nContent rating:{title_content_rating}\nImdb_id:{imdb_id}', reply_markup=inline_markup_film_parameters)
                 db_movie_write((title_imdb_id, title_name, title_year, title_genres, title_poster, title_rating, title_content_rating))
             except Exception as e:
                 logger.error(e)
-                bot.send_message(message.chat.id, f'Poster is unreadeble.\nTitle name: {title_name}\nYear: {title_year}\nGenres: {title_genres}\nRating: {title_rating}\nCOntent rating: {title_content_rating}', reply_markup=inline_markup_film_parameters)
+                bot.send_message(message.chat.id, f'Poster is unreadeble.\nTitle name:{title_name}\nYear:{title_year}\nGenres:{title_genres}\nRating:{title_rating}\nContent rating:{title_content_rating}\nImdb_id:{imdb_id}', reply_markup=inline_markup_film_parameters)
                 db_movie_write((title_imdb_id, title_name, title_year, title_genres, title_poster, title_rating, title_content_rating))
                 continue
         else:
             try:
-                bot.send_photo(message.chat.id, f'{db_result[0][4]}', caption=f'Title name: {db_result[0][1]}\nYear: {db_result[0][2]}\nGenres: {db_result[0][3]}\nRating: {db_result[0][5]}\nContent rating: {db_result[0][6]}', reply_markup=inline_markup_film_parameters)
+                bot.send_photo(message.chat.id, f'{db_result[0][4]}', caption=f'Title name:{db_result[0][1]}\nYear:{db_result[0][2]}\nGenres:{db_result[0][3]}\nRating:{db_result[0][5]}\nContent rating:{db_result[0][6]}\nImdb_id:{db_result[0][0]}', reply_markup=inline_markup_film_parameters)
             except Exception as e:
                 logger.error(e)
-                bot.send_message(message.chat.id, f'Poster is unreadeble.\nTitle name: {db_result[0][1]}\nYear: {db_result[0][2]}\nGenres: {db_result[0][3]}\nRating: {db_result[0][5]}\nContent rating: {db_result[0][6]}', reply_markup=inline_markup_film_parameters)
+                bot.send_message(message.chat.id, f'Poster is unreadeble.\nTitle name:{db_result[0][1]}\nYear:{db_result[0][2]}\nGenres:{db_result[0][3]}\nRating:{db_result[0][5]}\nContent rating:{db_result[0][6]}\nImdb_id:{db_result[0][0]}', reply_markup=inline_markup_film_parameters)
 
 
 def main():
