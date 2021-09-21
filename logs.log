@@ -55,3 +55,111 @@
 2021-09-20 22:28:55,303 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
 2021-09-20 22:32:22,463 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
 2021-09-20 22:38:13,149 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 15:26:27,532 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 15:27:56,387 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 15:30:02,154 - ERROR - root - 'str' object has no attribute 'get'
+2021-09-21 15:30:25,323 - ERROR - root - 'str' object has no attribute 'get'
+2021-09-21 15:31:05,422 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 9 supplied.
+2021-09-21 15:31:07,210 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 9 supplied.
+2021-09-21 16:15:44,956 - ERROR - root - 'str' object has no attribute 'get'
+2021-09-21 16:17:05,089 - ERROR - root - 'str' object has no attribute 'get'
+2021-09-21 16:24:57,706 - ERROR - root - 'str' object has no attribute 'get'
+2021-09-21 16:36:50,560 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:40:53,323 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:41:43,861 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:42:13,631 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:44:59,346 - ERROR - root - catching classes that do not inherit from BaseException is not allowed
+2021-09-21 16:48:34,579 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:49:18,660 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:49:18,735 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: invalid file HTTP URL specified: Wrong URL host
+2021-09-21 16:49:48,194 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:49:48,271 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: invalid file HTTP URL specified: Wrong URL host
+2021-09-21 16:50:04,383 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:50:04,462 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: invalid file HTTP URL specified: Wrong URL host
+2021-09-21 16:51:09,240 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:51:09,317 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: invalid file HTTP URL specified: Wrong URL host
+2021-09-21 16:55:53,203 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 16:55:53,313 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong remote file identifier specified: Wrong padding length
+2021-09-21 16:56:27,847 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:07:01,648 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:09:25,472 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:13:35,905 - ERROR - root - name 'DBError' is not defined
+2021-09-21 17:14:07,126 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 15 supplied.
+2021-09-21 17:14:07,613 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 13 supplied.
+2021-09-21 17:14:08,009 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 13 supplied.
+2021-09-21 17:14:08,423 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:14:08,530 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 24 supplied.
+2021-09-21 17:14:32,046 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 33 supplied.
+2021-09-21 17:14:32,552 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 15 supplied.
+2021-09-21 17:14:32,992 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 20 supplied.
+2021-09-21 17:14:33,400 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 15 supplied.
+2021-09-21 17:14:33,752 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:14:33,879 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 17 supplied.
+2021-09-21 17:14:34,309 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 10 supplied.
+2021-09-21 17:14:34,700 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 7 supplied.
+2021-09-21 17:14:35,301 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 13 supplied.
+2021-09-21 17:14:35,696 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 21 supplied.
+2021-09-21 17:14:36,098 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 13 supplied.
+2021-09-21 17:14:36,543 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 34 supplied.
+2021-09-21 17:14:36,963 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 12 supplied.
+2021-09-21 17:14:37,337 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 20 supplied.
+2021-09-21 17:14:37,706 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 11 supplied.
+2021-09-21 17:14:38,024 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:14:38,157 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 24 supplied.
+2021-09-21 17:14:38,561 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 46 supplied.
+2021-09-21 17:14:38,958 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 27 supplied.
+2021-09-21 17:14:39,330 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 13 supplied.
+2021-09-21 17:14:39,687 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 41 supplied.
+2021-09-21 17:14:40,080 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 31 supplied.
+2021-09-21 17:14:40,590 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 20 supplied.
+2021-09-21 17:14:41,091 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 27 supplied.
+2021-09-21 17:14:41,614 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 22 supplied.
+2021-09-21 17:14:42,020 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 18 supplied.
+2021-09-21 17:14:42,413 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 13 supplied.
+2021-09-21 17:14:42,803 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 29 supplied.
+2021-09-21 17:14:43,029 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 20 supplied.
+2021-09-21 17:14:43,195 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 17 supplied.
+2021-09-21 17:14:43,464 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 27 supplied.
+2021-09-21 17:14:44,176 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 9 supplied.
+2021-09-21 17:14:44,641 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 35 supplied.
+2021-09-21 17:14:44,989 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 12 supplied.
+2021-09-21 17:14:45,323 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 23 supplied.
+2021-09-21 17:14:45,788 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 35 supplied.
+2021-09-21 17:14:51,066 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 15 supplied.
+2021-09-21 17:14:51,576 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 13 supplied.
+2021-09-21 17:14:52,017 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 13 supplied.
+2021-09-21 17:14:52,428 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:14:52,598 - ERROR - db_operator - Incorrect number of bindings supplied. The current statement uses 1, and there are 24 supplied.
+2021-09-21 17:20:54,537 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:21:20,842 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:21:42,948 - ERROR - db_operator - UNIQUE constraint failed: movies.imdb_id
+2021-09-21 17:21:43,332 - ERROR - db_operator - UNIQUE constraint failed: movies.imdb_id
+2021-09-21 17:21:43,714 - ERROR - db_operator - UNIQUE constraint failed: movies.imdb_id
+2021-09-21 17:21:44,164 - ERROR - db_operator - UNIQUE constraint failed: movies.imdb_id
+2021-09-21 17:21:44,614 - ERROR - db_operator - UNIQUE constraint failed: movies.imdb_id
+2021-09-21 17:21:45,040 - ERROR - db_operator - UNIQUE constraint failed: movies.imdb_id
+2021-09-21 17:21:45,419 - ERROR - db_operator - UNIQUE constraint failed: movies.imdb_id
+2021-09-21 17:25:35,808 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:26:05,472 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:26:18,485 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:26:59,320 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:27:10,417 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:27:33,614 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:29:50,594 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:32:36,104 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:33:51,803 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:34:35,322 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:35:35,243 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:36:32,875 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:38:32,701 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:41:06,979 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:41:08,769 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:41:12,467 - ERROR - db_operator - local variable 'result' referenced before assignment
+2021-09-21 17:42:32,328 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:42:33,903 - ERROR - db_operator - name 'result' is not defined
+2021-09-21 17:43:07,788 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:43:09,297 - ERROR - db_operator - Error binding parameter 0 - probably unsupported type.
+2021-09-21 17:45:15,081 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:45:16,758 - ERROR - db_operator - name 'tupl' is not defined
+2021-09-21 17:45:43,446 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-21 17:45:45,332 - ERROR - db_operator - name 'tupl' is not defined

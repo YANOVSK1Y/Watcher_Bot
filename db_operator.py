@@ -20,20 +20,15 @@ def db_movie_check(imdb_id):
         logger.error(e)
 
 def db_movie_write(data):
+    # data = (imdb_id, name, year, genres, poster, rating, c_rating)
     try:
         conn = sqlite3.connect('movies.db')
         cur = conn.cursor()
-        cur.execute("SELECT name FROM movies WHERE name = (?)", data[1])
-        res_existence = cur.fetchall()
-        print(res_existence)
-        if len(res_existence) > 0:
-            pass
-        else:
-            cur.execute("INSERT INTO movies VALUES (?,?,?,?,?,?,?)", data)
-            cur.close()
-            conn.commit()
-            conn.close()
-    except DBError as e:
+        cur.execute("INSERT INTO movies VALUES (?,?,?,?,?,?,?)", data)
+        cur.close()
+        conn.commit()
+        conn.close()
+    except Exception as e:
         logger.error(e)
 
 def db_users_write(data):
@@ -66,11 +61,14 @@ def db_users_films_watch(user_chat_id, item):
         #data (userchatid, watch, willwatch, viewed)
         conn = sqlite3.connect('users_films.db')
         cur = conn.cursor()
-        cur.execute("SELECT watch FROM users_films WHERE userchatid = ?", user_chat_id)
+        cur.execute("SELECT watch FROM users_films WHERE userchatid = {}".format(user_chat_id))
         result_from_db = cur.fetchall()
-        print(result_from_db)
-        result = _check_existence(result_from_db)
-        cur.execute("UPDATE users_films SET watch = ? WHERE userchatid = ?", (result, user_chat_id))
+        res = ()
+        for i in result_from_db:
+            for j in i:
+                tupl.append(j)
+        print(res)
+        cur.execute("UPDATE users_films SET watch = ? WHERE userchatid = ?", (res, user_chat_id))
         cur.close()
         conn.close()
     except Exception as e:
