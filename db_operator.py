@@ -42,35 +42,36 @@ def db_users_write(data):
     except Exception as e:
         logger.error(e)
 
-def _check_existence(item , data_from_db):
-    print(data_from_db.split(','))
-    if data_from_db == None:
-        return False
-    elif item in data_from_db.split(','):
-        print(item, data_from_db.split(','))
+def _check_existence(item, list_to_check):
+    if list_to_check and item in list_to_check:
         return True
     else:
-        return False
+        pass
 
 
 
 def db_users_films_add(user_chat_id, item, category):
     try:
-        print(user_chat_id)
         conn = sqlite3.connect('users_films.db')
         cur = conn.cursor()
-        cur.execute("SELECT {} FROM users_films WHERE userchatid = {}".format(category, user_chat_id))
+        # cur.execute("SELECT {} FROM users_films WHERE userchatid = {}".format(category, user_chat_id))
+        cur.execute("SELECT * FROM users_films WHERE userchatid = {}".format(user_chat_id))
+
         result_from_db = cur.fetchall()
-        item_from_db = result_from_db[0][0]
-        print(item_from_db)
-        if _check_existence(item, item_from_db):
-            return False
-        else:
-            res = str(item_from_db) + ',' + str(item)
-            cur.execute(f"UPDATE users_films SET {category} = ? WHERE userchatid = ?", (res, user_chat_id))
+
+        
+
+
+
+
+        # if _check_existence(item, item_from_db):
+        #     return (False, message)
+        # else:
+        #     res = str(item_from_db) + '-' + str(item)
+        #     cur.execute(f"UPDATE users_films SET {category} = ? WHERE userchatid = ?", (res, user_chat_id))
         cur.close()
         conn.commit()
         conn.close()
-        return True
+
     except Exception as e:
         logger.error(e)

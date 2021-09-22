@@ -255,3 +255,44 @@
 2021-09-22 14:10:11,275 - ERROR - db_operator - 'NoneType' object has no attribute 'split'
 2021-09-22 14:11:47,842 - ERROR - db_operator - near "?": syntax error
 2021-09-22 14:11:50,708 - ERROR - db_operator - near "?": syntax error
+2021-09-22 15:05:55,095 - ERROR - db_operator - list index out of range
+2021-09-22 15:05:59,242 - ERROR - db_operator - list index out of range
+2021-09-22 15:06:01,005 - ERROR - db_operator - list index out of range
+2021-09-22 15:06:03,658 - ERROR - db_operator - list index out of range
+2021-09-22 15:06:04,822 - ERROR - db_operator - list index out of range
+2021-09-22 15:06:05,898 - ERROR - db_operator - list index out of range
+2021-09-22 15:06:28,594 - ERROR - db_operator - list index out of range
+2021-09-22 15:06:33,733 - ERROR - db_operator - list index out of range
+2021-09-22 15:06:43,383 - ERROR - db_operator - list index out of range
+2021-09-22 15:08:45,300 - ERROR - db_operator - list index out of range
+2021-09-22 15:54:43,270 - ERROR - db_operator - list index out of range
+2021-09-22 16:03:25,986 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-22 16:03:27,516 - ERROR - db_operator - list index out of range
+2021-09-22 16:26:44,761 - ERROR - db_operator - UNIQUE constraint failed: users.chatid
+2021-09-22 16:26:45,850 - ERROR - db_operator - UNIQUE constraint failed: users.chatid
+2021-09-22 16:26:47,183 - ERROR - db_operator - UNIQUE constraint failed: users.chatid
+2021-09-22 16:29:53,658 - ERROR - db_operator - UNIQUE constraint failed: users.chatid
+2021-09-22 16:29:59,070 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-22 16:30:02,226 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-22 16:35:14,915 - ERROR - db_operator - name 'items_listfrom_db' is not defined
+2021-09-22 16:35:56,211 - ERROR - db_operator - name 'items_listfrom_db' is not defined
+2021-09-22 16:40:40,395 - ERROR - db_operator - name 'items_listfrom_db' is not defined
+2021-09-22 16:40:43,377 - ERROR - db_operator - name 'items_listfrom_db' is not defined
+2021-09-22 16:40:45,475 - ERROR - db_operator - name 'items_listfrom_db' is not defined
+2021-09-22 16:40:57,002 - ERROR - db_operator - name 'items_listfrom_db' is not defined
+2021-09-22 16:42:46,491 - ERROR - db_operator - name 'items_listfrom_db' is not defined
+2021-09-22 16:42:49,218 - ERROR - db_operator - name 'items_listfrom_db' is not defined
+2021-09-22 16:43:15,561 - ERROR - db_operator - name 'items_listfrom_db' is not defined
+2021-09-22 16:47:56,992 - ERROR - db_operator - argument of type 'int' is not iterable
+2021-09-22 16:47:59,879 - ERROR - db_operator - argument of type 'int' is not iterable
+2021-09-22 16:48:14,156 - ERROR - db_operator - argument of type 'int' is not iterable
+2021-09-22 16:48:24,540 - ERROR - db_operator - argument of type 'int' is not iterable
+2021-09-22 16:56:30,904 - ERROR - db_operator - name 'res_list' is not defined
+2021-09-22 16:56:34,954 - ERROR - db_operator - name 'res_list' is not defined
+2021-09-22 16:56:52,927 - ERROR - db_operator - name 'res_list' is not defined
+2021-09-22 16:56:55,904 - ERROR - db_operator - name 'res_list' is not defined
+2021-09-22 16:57:06,821 - ERROR - db_operator - 'tuple' object has no attribute 'split'
+2021-09-22 16:57:14,977 - ERROR - db_operator - 'tuple' object has no attribute 'split'
+2021-09-22 16:57:16,995 - ERROR - db_operator - 'tuple' object has no attribute 'split'
+2021-09-22 16:57:19,964 - ERROR - db_operator - 'tuple' object has no attribute 'split'
+2021-09-22 17:08:38,139 - ERROR - db_operator - UNIQUE constraint failed: users.chatid
