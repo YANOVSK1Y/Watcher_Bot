@@ -49,21 +49,44 @@ def dialog_operator(message):
 
 @bot.callback_query_handler(func=lambda call: True)
 def query_handler(call):
+
     if call.data == 'watch':
-        bot.answer_callback_query(callback_query_id=call.id, text='Added to watch list')
-        # print(str(call.from_user.id) + " -- " + str(call.message.caption))
+        category = 'watch'
         if call.message.caption == None:
             st = str(call.message.text)
             imdb_id = st.split('\n')[-1].split(':')[-1]
         else:
             st = str(call.message.caption)
             imdb_id = st.split('\n')[-1].split(':')[-1]
-        db_users_films_watch(call.from_user.id, imdb_id)
-    elif  call.data == 'willwatch':
-        bot.answer_callback_query(callback_query_id=call.id, text='Added to willwatch list')
-    elif call.data == 'viewed':
-        bot.answer_callback_query(callback_query_id=call.id, text='Added to viewed list')
+        if db_users_films_add(call.from_user.id, imdb_id, category):
+            bot.answer_callback_query(callback_query_id=call.id, text='Added to watch list.')
+        else:
+            bot.answer_callback_query(callback_query_id=call.id, text='Still in watch list.')
 
+    elif  call.data == 'willwatch':
+        category = 'willwatch'
+        if call.message.caption == None:
+            st = str(call.message.text)
+            imdb_id = st.split('\n')[-1].split(':')[-1]
+        else:
+            st = str(call.message.caption)
+            imdb_id = st.split('\n')[-1].split(':')[-1]
+        if db_users_films_add(call.from_user.id, imdb_id, category):
+            bot.answer_callback_query(callback_query_id=call.id, text='Added to willwatch list')
+        else:
+            bot.answer_callback_query(callback_query_id=call.id, text='Still in willwatch list.')
+    elif call.data == 'viewed':
+        category = 'viewed'
+        if call.message.caption == None:
+            st = str(call.message.text)
+            imdb_id = st.split('\n')[-1].split(':')[-1]
+        else:
+            st = str(call.message.caption)
+            imdb_id = st.split('\n')[-1].split(':')[-1]
+        if db_users_films_add(call.from_user.id, imdb_id, category):
+            bot.answer_callback_query(callback_query_id=call.id, text='Added to willwatch list')
+        else:
+            bot.answer_callback_query(callback_query_id=call.id, text='Still in willwatch list.')
 
 def _find_by_titlename(message):
     result = search_by_titlename(message.text)

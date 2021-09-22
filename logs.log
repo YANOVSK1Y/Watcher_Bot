@@ -239,3 +239,19 @@
 2021-09-21 21:56:56,571 - ERROR - db_operator - database is locked
 2021-09-21 21:56:57,752 - ERROR - db_operator - database is locked
 2021-09-21 21:57:01,737 - ERROR - db_operator - database is locked
+2021-09-22 13:58:56,152 - ERROR - db_operator - name 'i' is not defined
+2021-09-22 13:58:59,326 - ERROR - db_operator - name 'i' is not defined
+2021-09-22 14:01:57,558 - ERROR - db_operator - name 'i' is not defined
+2021-09-22 14:02:01,295 - ERROR - db_operator - name 'i' is not defined
+2021-09-22 14:02:38,769 - ERROR - db_operator - name 'i' is not defined
+2021-09-22 14:02:44,279 - ERROR - db_operator - name 'i' is not defined
+2021-09-22 14:02:47,367 - ERROR - db_operator - name 'i' is not defined
+2021-09-22 14:05:11,499 - ERROR - db_operator - 'NoneType' object has no attribute 'split'
+2021-09-22 14:06:20,672 - ERROR - db_operator - 'NoneType' object has no attribute 'split'
+2021-09-22 14:07:03,783 - ERROR - db_operator - 'NoneType' object has no attribute 'split'
+2021-09-22 14:08:02,665 - ERROR - db_operator - 'NoneType' object has no attribute 'split'
+2021-09-22 14:08:06,373 - ERROR - db_operator - 'NoneType' object has no attribute 'split'
+2021-09-22 14:08:25,054 - ERROR - db_operator - 'NoneType' object has no attribute 'split'
+2021-09-22 14:10:11,275 - ERROR - db_operator - 'NoneType' object has no attribute 'split'
+2021-09-22 14:11:47,842 - ERROR - db_operator - near "?": syntax error
+2021-09-22 14:11:50,708 - ERROR - db_operator - near "?": syntax error
