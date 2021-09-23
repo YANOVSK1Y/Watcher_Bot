@@ -62,7 +62,10 @@ def query_handler(call):
             st = str(call.message.caption)
             imdb_id = st.split('\n')[-1].split(':')[-1]
 
-        (film_status, status_message) = db_users_films_add(call.from_user.id, imdb_id, category)
+        message = '1'
+        print(call.from_user.id)
+        db_add_to_watch_list(call.from_user.id, imdb_id)
+        # (film_status, status_message) = db_users_films_add(call.from_user.id, imdb_id, category)
         bot.answer_callback_query(callback_query_id=call.id, text=message)
         # if db_users_films_add(call.from_user.id, imdb_id, category):
         #     bot.answer_callback_query(callback_query_id=call.id, text='Added to watch list.')

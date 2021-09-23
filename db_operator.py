@@ -48,6 +48,32 @@ def _check_existence(item, list_to_check):
     else:
         pass
 
+def db_add_to_watch_list(user_chat_id, item):
+    conn = sqlite3.connect('users_films.db')
+    cur = conn.cursor()
+    cur.execute(f"SELECT watch from users_films WHERE userchatid={user_chat_id}")
+    print(user_chat_id)
+    res_from_db = cur.fetchall()
+    print(res_from_db)
+
+    if item in res_from_db[0][0]:
+        print(True)
+    else:
+        res = ''
+        for i in res_from_db[0]:
+            res += i + ','
+        res += item
+        cur.execute("UPDATE users_films SET watch=? WHERE userchatid = ?", (res, user_chat_id))
+    cur.close()
+    conn.commit()
+    conn.close()
+
+def db_add_to_willwatch_list(user_chat_id, item):
+    pass
+
+
+def db_add_to_viewed_list(user_chat_id, item):
+    pass
 
 
 def db_users_films_add(user_chat_id, item, category):
@@ -58,10 +84,6 @@ def db_users_films_add(user_chat_id, item, category):
         cur.execute("SELECT * FROM users_films WHERE userchatid = {}".format(user_chat_id))
 
         result_from_db = cur.fetchall()
-
-        
-
-
 
 
         # if _check_existence(item, item_from_db):
