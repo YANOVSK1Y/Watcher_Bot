@@ -42,7 +42,12 @@ def dialog_operator(message):
     elif lower_text_user_request == 'profile':
         bot.send_message(message.chat.id, 'Your profile.',reply_markup=profile_menu_keyboard)
     elif lower_text_user_request == 'watch':
-        pass
+        result_movie_list = db_return_users_films(message.chat.id, 'watch')
+        print(result_movie_list)
+        print('~'*100)
+        for i in result_movie_list[0]:
+            print(i)
+            bot.send_photo(message.chat.id, i[4], caption=f"Title name:{i[1]}\nYear:{i[2]}\nGenres:{i[3]}\nRating:{i[5]}\nContent rating:{i[6]}\nImdb_id:{i[0]}")
     elif lower_text_user_request == 'will watch':
         pass
     elif lower_text_user_request == 'viewed':

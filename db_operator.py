@@ -4,6 +4,22 @@ import logging
 logging.basicConfig(level=logging.INFO, filename='logs.log', format=('%(asctime)s - %(levelname)s - %(name)s - %(message)s'))
 logger = logging.getLogger(__name__)
 
+def db_return_users_films(user_chat_id, operator):
+    conn = sqlite3.connect('users_films.db')
+    cur = conn.cursor()
+    cur.execute("""SELECT {} FROM users_films WHERE userchatid='{}'""".format(operator,user_chat_id))
+    result_from_db = cur.fetchall()
+    result_movie_list = list()
+    for i in result_from_db[0][0].split(','):
+        if i != '':
+            value1 = db_movie_check(i)
+            if value1 != False:
+                result_movie_list.append(value1)
+    cur.close()
+    conn.close()
+    return result_movie_list
+
+
 def db_movie_check(imdb_id):
     try:
         conn = sqlite3.connect('movies.db')
@@ -12,7 +28,7 @@ def db_movie_check(imdb_id):
         result = cur.fetchall()
         cur.close()
         conn.close()
-        if len(result) > 0:
+        if len(result) != '' and len(result) != None:
             return result
         else:
             return False
@@ -20,7 +36,6 @@ def db_movie_check(imdb_id):
         logger.error(e)
 
 def db_movie_write(data):
-    # data = (imdb_id, name, year, genres, poster, rating, c_rating)
     try:
         conn = sqlite3.connect('movies.db')
         cur = conn.cursor()

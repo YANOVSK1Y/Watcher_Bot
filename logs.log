@@ -304,3 +304,10 @@
 2021-09-24 11:21:53,760 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
 2021-09-24 11:22:07,142 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
 2021-09-24 12:28:10,029 - ERROR - db_operator - UNIQUE constraint failed: users.chatid
+2021-09-24 12:43:52,909 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong remote file identifier specified: Wrong string length
+2021-09-24 12:44:00,538 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong remote file identifier specified: Wrong string length
+2021-09-24 12:44:03,719 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong remote file identifier specified: Wrong string length
+2021-09-24 12:44:07,232 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong remote file identifier specified: Wrong string length
+2021-09-24 12:45:52,585 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: MEDIA_CAPTION_TOO_LONG
+2021-09-24 12:45:57,484 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: MEDIA_CAPTION_TOO_LONG
+2021-09-24 12:46:18,178 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: MEDIA_CAPTION_TOO_LONG
