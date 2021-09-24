@@ -54,7 +54,6 @@ def dialog_operator(message):
 @bot.callback_query_handler(func=lambda call: True)
 def query_handler(call):
     if call.data == 'watch':
-        category = 'watch'
         if call.message.caption == None:
             st = str(call.message.text)
             imdb_id = st.split('\n')[-1].split(':')[-1]
@@ -64,27 +63,24 @@ def query_handler(call):
         result_ans = db_movied_add_to_user_list(call.from_user.id, imdb_id, 'watch')
         bot.answer_callback_query(callback_query_id=call.id, text=result_ans)
 
-
     elif  call.data == 'willwatch':
-        category = 'willwatch'
         if call.message.caption == None:
             st = str(call.message.text)
             imdb_id = st.split('\n')[-1].split(':')[-1]
         else:
             st = str(call.message.caption)
             imdb_id = st.split('\n')[-1].split(':')[-1]
-        result_ans = db_movied_add_to_user_list(call.from_user.id, imdb_id, 'watch')
+        result_ans = db_movied_add_to_user_list(call.from_user.id, imdb_id, 'willwatch')
         bot.answer_callback_query(callback_query_id=call.id, text=result_ans)
 
     elif call.data == 'viewed':
-        category = 'viewed'
         if call.message.caption == None:
             st = str(call.message.text)
             imdb_id = st.split('\n')[-1].split(':')[-1]
         else:
             st = str(call.message.caption)
             imdb_id = st.split('\n')[-1].split(':')[-1]
-        result_ans = db_movied_add_to_user_list(call.from_user.id, imdb_id, 'watch')
+        result_ans = db_movied_add_to_user_list(call.from_user.id, imdb_id, 'viewed')
         bot.answer_callback_query(callback_query_id=call.id, text=result_ans)
     elif call.data == 'clear':
         if call.message.caption == None:
@@ -93,7 +89,8 @@ def query_handler(call):
         else:
             st = str(call.message.caption)
             imdb_id = st.split('\n')[-1].split(':')[-1]
-        dell_from_db(call.from_user.id, imdb_id)
+        result_ans = dell_from_db(call.from_user.id, imdb_id)
+        bot.answer_callback_query(callback_query_id=call.id, text=result_ans)
 
 
 def _find_by_titlename(message):

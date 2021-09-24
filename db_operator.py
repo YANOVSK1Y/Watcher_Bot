@@ -76,18 +76,22 @@ def db_movied_add_to_user_list(user_chat_id, item, operator):
             if operator == 'watch':
                 res = ''
                 for i in result_from_db[0][1].split(','):
-                    res += i + ','
+                    if i != '':
+                        res += i + ','
                 res += str(item) + ','
             elif operator == 'willwatch':
                 res = ''
                 for i in result_from_db[0][2].split(','):
-                    res += i + ','
+                    if i != '':
+                        res += i + ','
                 res += str(item) + ','
             elif operator == 'viewed':
                 res = ''
                 for i in result_from_db[0][3].split(','):
-                    res += i + ','
+                    if i != '':
+                        res += i + ','
                 res += str(item) + ','
+            print(operator)
             cur.execute(f"UPDATE users_films SET {operator}='{res}' WHERE userchatid={user_chat_id}")
         result_message = f'Added to {operator} list'
     cur.close()
@@ -104,43 +108,38 @@ def dell_from_db(user_chat_id, item):
     print(result_from_db)
     result_exist_status = _check_exist(user_chat_id, item, result_from_db)
     print(result_exist_status)
-    res_all = list()
-    res_all.append(result_from_db[0])
+    res_all_list = list()
+    res_all = ''
     if result_exist_status[0] == True:
-        res = ''
         for i in result_from_db[0][1].split(','):
-            if i == item:
-                pass
-            else:
-                res += i
-        res_all.append(res)
-        res_all.append(result_from_db[0][2])
-        res_all.append(result_from_db[0][3])
+            if i != '':
+                if i != item:
+                    res_all += i + ','
+        res_all_list.append(res_all)
+        res_all_list.append(result_from_db[0][2])
+        res_all_list.append(result_from_db[0][3])
     elif result_exist_status[1] == True:
-        res = ''
-        for i in result_to_db[0][1].split(','):
-            if i == item:
-                pass
-            else:
-                res += i
-        res_all.append(result_from_db[0][1])
-        res_all.append(res)
-        res_all.append(result_from_db[0][3])
+        res_all = ''
+        for i in result_from_db[0][2].split(','):
+            if i != '':
+                if i != item:
+                    res_all += i + ','
+        res_all_list.append(result_from_db[0][1])
+        res_all_list.append(res_all)
+        res_all_list.append(result_from_db[0][3])
     elif result_exist_status[2] == True:
-        res = ''
-        for i in result_to_db[0][1].split(','):
-            if i == item:
-                pass
-            else:
-                res += i
-        res_all.append(result_from_db[0][1])
-        res_all.append(result_from_db[0][2])
-        res_all.append(res)
-    res_tup = tuple(res_all)
-    print(res_tup)
-    cur.execute(f"UPDATE users_films SET watch={res_tup[1]},willwatch=={res_tup[2]},viewed=={res_tup[3]} WHERE userchatid={user_chat_id}")
+        res_all = ''
+        for i in result_from_db[0][3].split(','):
+            if i != '':
+                if i != item:
+                    res_all += i + ','
+        res_all_list.append(result_from_db[0][1])
+        res_all_list.append(result_from_db[0][2])
+        res_all_list.append(res_all)
+
+    print(res_all_list)
+    cur.execute(f"UPDATE users_films SET watch='{res_all_list[0]}',willwatch='{res_all_list[1]}',viewed='{res_all_list[2]}' WHERE userchatid={user_chat_id}")
     cur.close()
     conn.commit()
     conn.close()
-    result_message = 'Cleared'
-    return result_message
+    return 'Cleared'

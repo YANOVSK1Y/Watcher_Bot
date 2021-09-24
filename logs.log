@@ -303,3 +303,4 @@
 2021-09-24 11:21:53,023 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
 2021-09-24 11:21:53,760 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
 2021-09-24 11:22:07,142 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 12:28:10,029 - ERROR - db_operator - UNIQUE constraint failed: users.chatid
