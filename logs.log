@@ -311,3 +311,82 @@
 2021-09-24 12:45:52,585 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: MEDIA_CAPTION_TOO_LONG
 2021-09-24 12:45:57,484 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: MEDIA_CAPTION_TOO_LONG
 2021-09-24 12:46:18,178 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: MEDIA_CAPTION_TOO_LONG
+2021-09-24 17:45:01,651 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 17:45:02,807 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 18:00:35,940 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 18:00:37,262 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 18:27:45,849 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong remote file identifier specified: Wrong string length
+2021-09-24 18:27:51,447 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong remote file identifier specified: Wrong string length
+2021-09-24 18:31:30,189 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 18:31:31,140 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 18:57:45,973 - ERROR - root - list index out of range
+2021-09-24 18:58:08,044 - ERROR - root - list index out of range
+2021-09-24 18:59:13,487 - ERROR - root - list index out of range
+2021-09-24 18:59:49,254 - ERROR - root - list index out of range
+2021-09-24 18:59:49,254 - ERROR - root - list index out of range
+2021-09-24 18:59:49,255 - ERROR - root - list index out of range
+2021-09-24 19:00:37,352 - ERROR - root - list index out of range
+2021-09-24 19:00:37,353 - ERROR - root - list index out of range
+2021-09-24 19:00:37,354 - ERROR - root - list index out of range
+2021-09-24 19:01:38,685 - ERROR - root - list index out of range
+2021-09-24 19:01:38,687 - ERROR - root - list index out of range
+2021-09-24 19:01:38,688 - ERROR - root - list index out of range
+2021-09-24 19:02:13,926 - ERROR - root - list index out of range
+2021-09-24 19:02:13,926 - ERROR - root - list index out of range
+2021-09-24 19:02:13,927 - ERROR - root - list index out of range
+2021-09-24 19:02:46,472 - ERROR - root - list index out of range
+2021-09-24 19:02:46,473 - ERROR - root - list index out of range
+2021-09-24 19:02:46,474 - ERROR - root - list index out of range
+2021-09-24 19:03:09,635 - ERROR - root - list index out of range
+2021-09-24 19:03:09,637 - ERROR - root - list index out of range
+2021-09-24 19:03:09,638 - ERROR - root - list index out of range
+2021-09-24 19:03:47,452 - ERROR - root - list index out of range
+2021-09-24 19:03:47,453 - ERROR - root - list index out of range
+2021-09-24 19:03:47,454 - ERROR - root - list index out of range
+2021-09-24 19:08:57,529 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:11:01,956 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:18:49,569 - ERROR - root - list index out of range
+2021-09-24 19:20:29,275 - ERROR - root - list index out of range
+2021-09-24 19:20:29,275 - ERROR - root - list index out of range
+2021-09-24 19:22:06,820 - ERROR - db_operator - list index out of range
+2021-09-24 19:27:32,025 - ERROR - root - object of type 'NoneType' has no len()
+2021-09-24 19:27:42,079 - ERROR - db_operator - UNIQUE constraint failed: users.chatid
+2021-09-24 19:27:51,605 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:27:53,022 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:28:10,403 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:31:50,225 - ERROR - db_operator - list index out of range
+2021-09-24 19:33:39,099 - ERROR - db_operator - UNIQUE constraint failed: users.chatid
+2021-09-24 19:34:57,391 - ERROR - root - list index out of range
+2021-09-24 19:34:57,391 - ERROR - root - list index out of range
+2021-09-24 19:35:57,575 - ERROR - root - list index out of range
+2021-09-24 19:35:57,575 - ERROR - root - list index out of range
+2021-09-24 19:36:10,483 - ERROR - root - list index out of range
+2021-09-24 19:36:10,483 - ERROR - root - list index out of range
+2021-09-24 19:38:01,997 - ERROR - root - list index out of range
+2021-09-24 19:38:01,997 - ERROR - root - list index out of range
+2021-09-24 19:38:10,678 - ERROR - root - list index out of range
+2021-09-24 19:38:10,678 - ERROR - root - list index out of range
+2021-09-24 19:38:20,285 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:38:34,086 - ERROR - root - list index out of range
+2021-09-24 19:38:34,087 - ERROR - root - list index out of range
+2021-09-24 19:38:41,077 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:38:58,630 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:54:16,713 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:54:33,452 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:55:48,275 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:55:55,899 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: failed to get HTTP URL content
+2021-09-24 19:55:59,904 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:56:04,598 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 19:57:07,772 - ERROR - TeleBot - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 20:01:03,865 - ERROR - root - 'Response' object has no attribute 'get'
+2021-09-24 20:01:11,527 - ERROR - root - 'Response' object has no attribute 'get'
+2021-09-24 20:02:31,979 - ERROR - root - 'Response' object has no attribute 'get'
+2021-09-24 20:02:53,414 - ERROR - root - 'Response' object has no attribute 'get'
+2021-09-24 20:03:39,215 - ERROR - root - send_message() missing 1 required positional argument: 'text'
+2021-09-24 20:04:00,416 - ERROR - root - send_message() missing 1 required positional argument: 'text'
+2021-09-24 20:04:10,632 - ERROR - root - name 'messdage' is not defined
+2021-09-24 20:04:35,460 - ERROR - root - name 'messdage' is not defined
+2021-09-24 20:09:58,831 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 20:10:14,502 - ERROR - root - A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: wrong type of the web page content
+2021-09-24 20:11:15,699 - ERROR - root - list index out of range
+2021-09-24 20:11:15,699 - ERROR - root - list index out of range

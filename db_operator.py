@@ -5,19 +5,23 @@ logging.basicConfig(level=logging.INFO, filename='logs.log', format=('%(asctime)
 logger = logging.getLogger(__name__)
 
 def db_return_users_films(user_chat_id, operator):
-    conn = sqlite3.connect('users_films.db')
-    cur = conn.cursor()
-    cur.execute("""SELECT {} FROM users_films WHERE userchatid='{}'""".format(operator,user_chat_id))
-    result_from_db = cur.fetchall()
-    result_movie_list = list()
-    for i in result_from_db[0][0].split(','):
-        if i != '':
-            value1 = db_movie_check(i)
-            if value1 != False:
-                result_movie_list.append(value1)
-    cur.close()
-    conn.close()
-    return result_movie_list
+    try:
+        conn = sqlite3.connect('users_films.db')
+        cur = conn.cursor()
+        cur.execute("""SELECT {} FROM users_films WHERE userchatid='{}'""".format(operator,user_chat_id))
+        result_from_db = cur.fetchall()
+        result_movie_list = list()
+        for i in result_from_db[0][0].split(','):
+            if i != '':
+                value1 = db_movie_check(i)
+                if value1 != False:
+                    result_movie_list.append(value1)
+        cur.close()
+        conn.close()
+        return result_movie_list
+    except Exception as e:
+        logger.error(e)
+        logger.debug('Error from db return users films')
 
 
 def db_movie_check(imdb_id):
@@ -74,9 +78,7 @@ def db_movied_add_to_user_list(user_chat_id, item, operator):
     cur = conn.cursor()
     cur.execute(f"SELECT * FROM users_films WHERE userchatid={user_chat_id}")
     result_from_db = cur.fetchall()
-    print(result_from_db)
     result_exist_status = _check_exist(user_chat_id, item, result_from_db)
-    print(result_exist_status)
     result_message = ''
     if result_exist_status[0] == True:
         result_message = 'Still in watch list'
@@ -106,13 +108,11 @@ def db_movied_add_to_user_list(user_chat_id, item, operator):
                     if i != '':
                         res += i + ','
                 res += str(item) + ','
-            print(operator)
             cur.execute(f"UPDATE users_films SET {operator}='{res}' WHERE userchatid={user_chat_id}")
         result_message = f'Added to {operator} list'
     cur.close()
     conn.commit()
     conn.close()
-    print(result_message)
     return result_message
 
 def dell_from_db(user_chat_id, item):
@@ -120,9 +120,7 @@ def dell_from_db(user_chat_id, item):
     cur = conn.cursor()
     cur.execute(f"SELECT * FROM users_films WHERE userchatid={user_chat_id}")
     result_from_db = cur.fetchall()
-    print(result_from_db)
     result_exist_status = _check_exist(user_chat_id, item, result_from_db)
-    print(result_exist_status)
     res_all_list = list()
     res_all = ''
     if result_exist_status[0] == True:
@@ -152,7 +150,6 @@ def dell_from_db(user_chat_id, item):
         res_all_list.append(result_from_db[0][2])
         res_all_list.append(res_all)
 
-    print(res_all_list)
     cur.execute(f"UPDATE users_films SET watch='{res_all_list[0]}',willwatch='{res_all_list[1]}',viewed='{res_all_list[2]}' WHERE userchatid={user_chat_id}")
     cur.close()
     conn.commit()
