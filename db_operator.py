@@ -42,95 +42,105 @@ def db_users_write(data):
     except Exception as e:
         logger.error(e)
 
-
-def db_add_to_watch_list(user_chat_id, item):
-    conn = sqlite3.connect('users_films.db')
-    cur = conn.cursor()
-    cur.execute(f"SELECT watch from users_films WHERE userchatid={user_chat_id}")
-    print(user_chat_id)
-    res_from_db = cur.fetchall()
-    print(res_from_db)
-    if res_from_db == None or res_from_db == '':
-        return False
-    else:
-        if item in res_from_db[0][0]:
-            print(True)
-        else:
-            res = ''
-            for i in res_from_db[0]:
-                res += i + ','
-            res += item
-            cur.execute("UPDATE users_films SET watch=? WHERE userchatid = ?", (res, user_chat_id))
-        cur.close()
-        conn.commit()
-        conn.close()
-        return True
-
-def db_add_to_willwatch_list(user_chat_id, item):
-    conn = sqlite3.connect('users_films.db')
-    cur = conn.cursor()
-    cur.execute(f"SELECT willwatch from users_films WHERE userchatid={user_chat_id}")
-    print(user_chat_id)
-    res_from_db = cur.fetchall()
-    print(res_from_db)
-    if res_from_db == None or res_from_db == '':
-        return False
-    else:
-        if item in res_from_db[0][0]:
-            print(True)
-        else:
-            res = ''
-            for i in res_from_db[0]:
-                res += i + ','
-            res += item
-            cur.execute("UPDATE users_films SET willwatch=? WHERE userchatid = ?", (res, user_chat_id))
-        cur.close()
-        conn.commit()
-        conn.close()
-        return True
-
-
-def db_add_to_viewed_list(user_chat_id, item):
-    conn = sqlite3.connect('users_films.db')
-    cur = conn.cursor()
-    cur.execute(f"SELECT viewed from users_films WHERE userchatid={user_chat_id}")
-    print(user_chat_id)
-    res_from_db = cur.fetchall()
-    if res_from_db == None or res_from_db == '':
-        return False
-    else:
-        print(res_from_db)
-        if item in res_from_db[0][0]:
-            print(True)
-        else:
-            res = ''
-            for i in res_from_db[0]:
-                res += i + ','
-            res += item
-            cur.execute("UPDATE users_films SET viewed=? WHERE userchatid = ?", (res, user_chat_id))
-        cur.close()
-        conn.commit()
-        conn.close()
-        return True
+def _check_exist(user_chat_id, item, data_from_db):
+    watch_list_status = False
+    willwatch_list_status = False
+    viewed_list_status = False
+    if item in data_from_db[0][1]:
+        watch_list_status = True
+    elif item in data_from_db[0][2]:
+        willwatch_list_status = True
+    elif item in data_from_db[0][3]:
+        viewed_list_status = True
+    return (watch_list_status, willwatch_list_status, viewed_list_status)
 
 def db_movied_add_to_user_list(user_chat_id, item, operator):
     conn = sqlite3.connect('users_films.db')
     cur = conn.cursor()
-    cur.execute(f"SELECT {operator} FROM users_films WHERE userchatid={user_chat_id}")
+    cur.execute(f"SELECT * FROM users_films WHERE userchatid={user_chat_id}")
     result_from_db = cur.fetchall()
-    if result_from_db == None or result_from_db == '':
-        pass
+    print(result_from_db)
+    result_exist_status = _check_exist(user_chat_id, item, result_from_db)
+    print(result_exist_status)
+    result_message = ''
+    if result_exist_status[0] == True:
+        result_message = 'Still in watch list'
+    elif result_exist_status[1] == True:
+        result_message = 'Still in will watch list'
+    elif result_exist_status[2] == True:
+        result_message = 'Still in viewed list'
     else:
-        if item in res_from_db[0][0]:
-            return True
+        if result_from_db == None or result_from_db == '':
+            pass
         else:
-            res = ''
-            for i in res_from_db[0]:
-                res += i + ','
-            res += item
-            cur.execute(f"UPDATE users_films SET {operator}={res} WHERE userchatid={user_chat_id}")
-
+            if operator == 'watch':
+                res = ''
+                for i in result_from_db[0][1].split(','):
+                    res += i + ','
+                res += str(item) + ','
+            elif operator == 'willwatch':
+                res = ''
+                for i in result_from_db[0][2].split(','):
+                    res += i + ','
+                res += str(item) + ','
+            elif operator == 'viewed':
+                res = ''
+                for i in result_from_db[0][3].split(','):
+                    res += i + ','
+                res += str(item) + ','
+            cur.execute(f"UPDATE users_films SET {operator}='{res}' WHERE userchatid={user_chat_id}")
+        result_message = f'Added to {operator} list'
     cur.close()
     conn.commit()
-    comm.close()
-    return Fasle
+    conn.close()
+    print(result_message)
+    return result_message
+
+def dell_from_db(user_chat_id, item):
+    conn = sqlite3.connect('users_films.db')
+    cur = conn.cursor()
+    cur.execute(f"SELECT * FROM users_films WHERE userchatid={user_chat_id}")
+    result_from_db = cur.fetchall()
+    print(result_from_db)
+    result_exist_status = _check_exist(user_chat_id, item, result_from_db)
+    print(result_exist_status)
+    res_all = list()
+    res_all.append(result_from_db[0])
+    if result_exist_status[0] == True:
+        res = ''
+        for i in result_from_db[0][1].split(','):
+            if i == item:
+                pass
+            else:
+                res += i
+        res_all.append(res)
+        res_all.append(result_from_db[0][2])
+        res_all.append(result_from_db[0][3])
+    elif result_exist_status[1] == True:
+        res = ''
+        for i in result_to_db[0][1].split(','):
+            if i == item:
+                pass
+            else:
+                res += i
+        res_all.append(result_from_db[0][1])
+        res_all.append(res)
+        res_all.append(result_from_db[0][3])
+    elif result_exist_status[2] == True:
+        res = ''
+        for i in result_to_db[0][1].split(','):
+            if i == item:
+                pass
+            else:
+                res += i
+        res_all.append(result_from_db[0][1])
+        res_all.append(result_from_db[0][2])
+        res_all.append(res)
+    res_tup = tuple(res_all)
+    print(res_tup)
+    cur.execute(f"UPDATE users_films SET watch={res_tup[1]},willwatch=={res_tup[2]},viewed=={res_tup[3]} WHERE userchatid={user_chat_id}")
+    cur.close()
+    conn.commit()
+    conn.close()
+    result_message = 'Cleared'
+    return result_message

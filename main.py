@@ -23,7 +23,8 @@ inline_markup_film_parameters = types.InlineKeyboardMarkup(row_width=3)
 watch = types.InlineKeyboardButton("Watch", callback_data='watch')
 weillwatch = types.InlineKeyboardButton("WillWatch", callback_data='willwatch')
 viewed = types.InlineKeyboardButton("Viewed", callback_data='viewed')
-inline_markup_film_parameters.add(watch, weillwatch, viewed)
+clear = types.InlineKeyboardButton("Clear", callback_data='clear')
+inline_markup_film_parameters.add(watch, weillwatch, viewed, clear)
 
 @bot.message_handler(commands=['start'])
 def _start(message):
@@ -60,15 +61,9 @@ def query_handler(call):
         else:
             st = str(call.message.caption)
             imdb_id = st.split('\n')[-1].split(':')[-1]
-        print(call.from_user.id)
-        # result_ans = db_add_to_watch_list(call.from_user.id, imdb_id)
-        result_and = db_movied_add_to_user_list(call.from_user.id, imdb_id, 'watch')
-        if result_ans == True:
-            bot.answer_callback_query(callback_query_id=call.id, text='Added to watch list')
-        elif result_ans == False:
-            bot.answer_callback_query(callback_query_id=call.id, text='Still in watch list')
-        else:
-            bot.answer_callback_query(callback_query_id=call.id, text='Somesing go wron')
+        result_ans = db_movied_add_to_user_list(call.from_user.id, imdb_id, 'watch')
+        bot.answer_callback_query(callback_query_id=call.id, text=result_ans)
+
 
     elif  call.data == 'willwatch':
         category = 'willwatch'
@@ -78,13 +73,8 @@ def query_handler(call):
         else:
             st = str(call.message.caption)
             imdb_id = st.split('\n')[-1].split(':')[-1]
-        result_ans = db_add_to_willwatch_list(call.from_user.id, imdb_id)
-        if result_ans == True:
-            bot.answer_callback_query(callback_query_id=call.id, text='Added to will watch list')
-        elif result_ans == False:
-            bot.answer_callback_query(callback_query_id=call.id, text='Still in will watch list')
-        else:
-            bot.answer_callback_query(callback_query_id=call.id, text='Somesing go wron')
+        result_ans = db_movied_add_to_user_list(call.from_user.id, imdb_id, 'watch')
+        bot.answer_callback_query(callback_query_id=call.id, text=result_ans)
 
     elif call.data == 'viewed':
         category = 'viewed'
@@ -94,13 +84,17 @@ def query_handler(call):
         else:
             st = str(call.message.caption)
             imdb_id = st.split('\n')[-1].split(':')[-1]
-        result_ans = db_add_to_willwatch_list(call.from_user.id, imdb_id)
-        if result_ans == True:
-            bot.answer_callback_query(callback_query_id=call.id, text='Added to viewed list')
-        elif result_ans == False:
-            bot.answer_callback_query(callback_query_id=call.id, text='Still in viewed list')
+        result_ans = db_movied_add_to_user_list(call.from_user.id, imdb_id, 'watch')
+        bot.answer_callback_query(callback_query_id=call.id, text=result_ans)
+    elif call.data == 'clear':
+        if call.message.caption == None:
+            st = str(call.message.text)
+            imdb_id = st.split('\n')[-1].split(':')[-1]
         else:
-            bot.answer_callback_query(callback_query_id=call.id, text='Somesing go wron')
+            st = str(call.message.caption)
+            imdb_id = st.split('\n')[-1].split(':')[-1]
+        dell_from_db(call.from_user.id, imdb_id)
+
 
 def _find_by_titlename(message):
     result = search_by_titlename(message.text)
